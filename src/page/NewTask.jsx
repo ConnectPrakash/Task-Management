@@ -26,7 +26,7 @@ function NewTask() {
 
   useEffect(() => {
     axios
-      .get("https://task-management-dr4x.onrender.com/user")
+      .get("https://task-management-1-al5b.onrender.com/user")
       .then((response) => {
         const users = response.data.data || [];
         setTasks(users);
@@ -52,7 +52,7 @@ function NewTask() {
     }
 
     axios
-      .post("https://task-management-dr4x.onrender.com/task", {
+      .post("https://task-management-1-al5b.onrender.com/task", {
         title,
         description,
         status: "Pending",

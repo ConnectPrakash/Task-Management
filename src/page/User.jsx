@@ -9,7 +9,7 @@ function User() {
 const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("https://task-management-dr4x.onrender.com/user")
+      .get("https://task-management-1-al5b.onrender.com/user")
       .then((response) => {
         setTasks(response.data.data || []);
         console.log("Users:", response.data.data);
@@ -21,7 +21,7 @@ const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("https://task-management-dr4x.onrender.com/company")
+      .get("https://task-management-1-al5b.onrender.com/company")
       .then((response) => {
         setCompany(response.data.data || []);
         console.log("Companies:", response.data.data);

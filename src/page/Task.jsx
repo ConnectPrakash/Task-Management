@@ -32,8 +32,8 @@ function Task() {
     async function fetchData() {
       try {
         const [companyRes, taskRes] = await Promise.all([
-          axios.get("https://task-management-dr4x.onrender.com/user"),
-          axios.get("https://task-management-dr4x.onrender.com/task"),
+          axios.get("https://task-management-1-al5b.onrender.com/user"),
+          axios.get("https://task-management-1-al5b.onrender.com/task"),
         ]);
 
         setCompany(companyRes.data.data || []);
@@ -61,7 +61,7 @@ function Task() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://task-management-dr4x.onrender.com/task/${id}`);
+      await axios.delete(`https://task-management-1-al5b.onrender.com/task/${id}`);
       setTasks((prevTasks) => prevTasks.filter((task) => task._id !== id));
       toast.success("Task deleted successfully");
     } catch (error) {

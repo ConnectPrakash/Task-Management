@@ -28,8 +28,8 @@ const Dashboard = () => {
     async function fetchData() {
       try {
         const [userRes, taskRes] = await Promise.all([
-          axios.get("https://task-management-dr4x.onrender.com/user"),
-          axios.get("https://task-management-dr4x.onrender.com/task")
+          axios.get("https://task-management-1-al5b.onrender.com/user"),
+          axios.get("https://task-management-1-al5b.onrender.com/task")
         ]);
         
         setUsers(userRes.data.data || []);

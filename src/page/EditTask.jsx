@@ -9,7 +9,7 @@ function EditTask() {
     const [status,setStatus] = useState([]);
     const {id} = useParams();
     useEffect(() =>{
-        axios.get(`https://task-management-dr4x.onrender.com/task/${id}`)
+        axios.get(`https://task-management-1-al5b.onrender.com/task/${id}`)
         .then((response) =>{
            setTask(response.data.data);
         })
@@ -19,7 +19,7 @@ function EditTask() {
     },[])
   console.log(task.createdId);
     useEffect(() =>{
-        axios.get(`https://task-management-dr4x.onrender.com/user/${task.createdId}`)
+        axios.get(`https://task-management-1-al5b.onrender.com/user/${task.createdId}`)
         .then((response) =>{
            setUser(response.data.data);
         })
@@ -30,7 +30,7 @@ function EditTask() {
     console.log(task.createdId);
 
   const handleUpdate = () =>{
-    axios.put(`https://task-management-dr4x.onrender.com/task/${task._id}`,{
+    axios.put(`https://task-management-1-al5b.onrender.com/task/${task._id}`,{
          title:task.title,
          description:task.description,
         status
