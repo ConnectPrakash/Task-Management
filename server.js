@@ -22,7 +22,14 @@ try {
 }}
 
 connectDb();
-
+app.use(express.static("public", {
+    setHeaders: (res, path) => {
+      if (path.endsWith(".js")) {
+        res.setHeader("Content-Type", "text/javascript");
+      }
+    }
+  }));
+  
 app.post('/task',TaskController);
 app.get('/task',AllTaskController);
 app.get('/task/:id',OneTaskController);
