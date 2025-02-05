@@ -49,7 +49,7 @@ const Dashboard = () => {
     <div>
       <Header props={"Dashboard"} />
       <div className='Task height'>
-        {userTasks.length > 0 && token? (
+        {userTasks.length > 0 && !token? (
           <ul>
             {userTasks.map((task) => {
               const createdUser = users.find(user => user._id === task.createdId);

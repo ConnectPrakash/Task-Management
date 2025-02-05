@@ -60,7 +60,7 @@ function UserProfile() {
   return (
     <div className="User-profile-container">
       <Header props="User Profile" />
-      <div className="user-profile">
+      <div className="user-profile ">
         <div className="user-profile-img">
          
           <img src={image || "/default-profile.jpg"} alt="Profile" />
