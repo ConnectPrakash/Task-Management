@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../component/header";
+import Header from "../component/header.jsx";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { Plus, Trash2 } from "lucide-react";

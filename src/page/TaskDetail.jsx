@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation, useParams } from 'react-router-dom'
-import Header from '../component/Header';
+import Header from '../component/Header.jsx';
 
 function TaskDetail() {
     

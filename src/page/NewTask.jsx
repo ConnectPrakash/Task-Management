@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
-import Header from "../component/header";
+import Header from "../component/header.jsx";
 
 function NewTask() {
   const [title, setTitle] = useState("");
