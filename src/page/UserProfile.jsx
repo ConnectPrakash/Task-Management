@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "../component/header.jsx";
+import Header from "../component/header";
 import axios from "axios";
 import image from '../assets/male.jpg'
 
