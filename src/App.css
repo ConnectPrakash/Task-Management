@@ -1,6 +1,9 @@
 /* Global Styles */
+/* *,::before,::after{
+outline: 1px solid red;
+} */
 body {
-  font-family: "Lilita One", sans-serif;
+  font-family: "Prompt", sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 0;
@@ -15,13 +18,13 @@ body {
   width: 100%;
   height: 90vh !important;
   overflow: auto;
-  background-color:#A5BFCC ;
+  background-color:#ffffff ;
 }
 .Task{
   width: 100%;
   height: 90vh !important;
   overflow: auto;
-  background-color:#A5BFCC ;
+  background-color:#ffffff ;
 }
 
 .Home-container::-webkit-scrollbar{
@@ -86,28 +89,47 @@ body {
 /* Home Content */
 .Home .home-content h2 {
   font-size: 3.5rem;
-  color: #0056b3;
+  font-weight: 600;
+  color: rgba(126, 3, 3, 0.852);
+  text-align: center;
+  font-family: "Prompt", sans-serif;
 }
 
 .Home .home-content h4 {
-  color: #0056b3;
+  color:rgba(255, 0, 0, 0.57);
+  font-family: "Prompt", sans-serif;
   font-size: 2rem;
+  text-align: justify;
 }
 
 .Home .home-content p {
-  color: #080909;
+  font-family: "Prompt", sans-serif;
+  color: #080909c9;
+  font-weight: 600;
+  line-height: 2;
   font-size: 1.2rem;
+  text-align: justify;
 }
 
 .Home .home-content button {
   padding: 12px;
-  background-color: #0056b3;
-  min-width: 150px;
-  color: white;
+  background-color: rgba(126, 3, 3, 0.852);
+  width:100%;
+  color: rgba(255, 255, 255, 0.856);
   border: none;
   cursor: pointer;
   border-radius: 1rem;
+  justify-content: center;
   margin-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "Prompt", sans-serif;
+  transition: all 0.3s ease;
+
+}
+.Home .home-content button:hover{
+  background-color: rgba(126, 3, 3, 0.693);
+  transform: translateY(-10px);
+
 }
 /* header */
 .header{
@@ -139,10 +161,13 @@ body {
 
 .Home-User h2 {
   font-size: 2.5rem;
+  font-family: "Bungee Tint", sans-serif;
 }
 
 .Home-User p {
   text-align: center;
+  font-size: 1rem;
+  color:rgba(255, 0, 0, 0.57);
 }
 
 /* Background Styling */
@@ -169,10 +194,12 @@ body {
 }
 .Home-create-Task div h2{
   font-size: 3rem;
-  color: #0056b3;
+ color: rgba(126, 3, 3, 0.852)
 }
 .Home-create-Task div p{
   font-size: 1.4rem;
+  color: rgba(126, 3, 3, 0.563);
+
   line-height: 1.4;
 }
 .Home-create-Task-img{
@@ -202,8 +229,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #222;
-  color: white;
+  background-color: #85aac74a;
+  color: #ffffffba; 
+  
 }
 
 .header h2 {
@@ -332,16 +360,16 @@ body {
   margin-top: 50px;
 }
 .sidebar h2{
+  font-family: "Bungee Tint", sans-serif;
   text-align: center;
   margin-top: 0px;
   padding:15px;
   font-size: 1.7rem;
   color:#F4EDD3
 }
-.sidebar{
-  height: 100vh;
+.sidebar{height: 100vh;
   width: 100%;
-  background-color:#4C585B;
+  background-color:#85aac74a;
   box-shadow: 0px 0px 3px black;
   overflow: hidden;
 }
@@ -377,32 +405,36 @@ body {
   list-style: none;
   font-size: 1.3rem;
   font-weight: bold;
-  width: 100%;
+  width: 80%;
   height: 55px;
   display: flex;
+  margin: auto;
   align-items: center;
    cursor: pointer;
 }
 .sidebar ul li a{
-  color:white ;
-  display: block;
-  padding:15px 30px
+  font-family: "Prompt", sans-serif;
+  color:rgb(179, 6, 6) ;
+  font-weight: 600;
+  display: flex;
+  padding:0px 30px;
+  border-radius: 1rem;
+  
 }
 .sidebar ul li a:hover{
-  background-color: #A5BFCC;
+  background-color: #ffffffbf;
   color:rgb(5, 4, 4) !important;
 }
 .height{
   width: 100%;
   height: 100vh;
   overflow: auto;
-  background-color:#A5BFCC ;
+  background-color:#ffffff ;
 }
 .divide-page{
   display: grid;
   grid-template-columns:250px auto;
   width: 100% !important;
-  background-color: #A5BFCC;
   height: auto;
 
 }
@@ -479,7 +511,7 @@ body {
     display: grid;
     grid-template-columns: 40% 1fr !important; /* Flexible layout */
     text-align: center;
-    background-color: #4C585B;
+    background-color: #B2A5FF;
     /* padding: 12px; */
     box-shadow: 0px 0px 3px black;
     z-index: 1000; /* Ensure it stays above other content */
@@ -518,7 +550,7 @@ body {
   }
   .Task ul{
     margin-right: 40px;
-    margin-top: 40px;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr !important;
     gap:20px;
@@ -543,11 +575,13 @@ body {
   display: grid;
   grid-template-columns: 80% 20%;
   text-align: center;
-  background-color: #4C585B;
+  background-color: #85aac74a;
   padding:12px;
-  box-shadow: 0px 0px 3px black;
+
 }
 .header h2{
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
   margin-top: 0px;
   color:white;
   letter-spacing: 3px;
@@ -584,12 +618,12 @@ body {
 }
 .header a{
   width: 70%;
-  height: 90%;
+  height: 54% !important;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blueviolet;
+  background-color: rgba(126, 3, 3, 0.852);
   color:white;
   border-radius: 1.2rem;
   box-shadow: 2px 2px 1px black;
@@ -641,7 +675,7 @@ body {
 }
 .Task ul{
   margin-right: 40px;
-  margin-top: 40px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap:20px;
@@ -650,13 +684,13 @@ body {
   border:1px solid black;
   padding:12px;
   list-style: none;
-  background-color: white;
+  background-color: #ffffffbf;
   border-radius: 1.3rem;
   box-shadow: 2px 1px 2px black;
 }
 .Task ul li .dlt{
   cursor:pointer;
-  float: right;
+  float: right; 
   color:red;
 }
 .Task ul li .edit{
@@ -666,7 +700,6 @@ body {
 }
 .Task div{
   width: 100%;
-  margin-left: auto;
 }
 .Task button{
   cursor: pointer;
@@ -853,12 +886,17 @@ height: 85vh;
   align-items: center;
   flex-direction: column;
   margin:100px auto;
-  background-color: #7E99A3;
+  background-color: #85aac74a;
 padding-block: 20px;
+border-radius: 2rem;
+box-shadow: 0px 0px 1px black;
   
 }
 .new-task h2{
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  color:rgba(126, 3, 3, 0.852)
 }
 .Task-container{
   width: 60%;
@@ -868,19 +906,29 @@ padding-block: 20px;
   margin-bottom: 20px;
 }
 .Task-input label{
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
     display: block;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    display: none;
 }
 .Task-input input{
   width: 95%;
   padding:12px;
   font-size: 1.2rem;
+  border:none;
+  border-radius: 1rem;
+  font-family: "Prompt", sans-serif;
 }
 .Task-input select{
   width: 100%;
   padding:15px;
   font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: "Prompt", sans-serif;
+
 
 }
 .Task-input button{
@@ -890,15 +938,13 @@ padding-block: 20px;
   font-size: 1.2rem;
   border-radius: 1rem;
   margin-top: 10px;
-  background-color: blueviolet;
-  color:white
+  background-color: rgba(126, 3, 3, 0.852);
+  color:white;
+  border: none;
 }
 
 /* User Profile */
-.User-profile-container{
-  background-color: #7E99A3;
 
-}
 .user-profile-img{
   width: 200px !important;
   height: 200px;
@@ -926,8 +972,9 @@ padding-block: 20px;
   justify-content: center;
   align-items: center;
   margin: 50px auto;
-  background-color: #A5BFCC;
+  background-color: #85aac74a;
   padding:30px;
+  border-radius: 1rem;
 }
 .user-profile div{
   display: grid;
@@ -948,7 +995,7 @@ padding-block: 20px;
   align-items: center;
   padding:30px;
   border-radius: 12px;
-  background-color: #7E99A3;
+  background-color: #85aac74a;
   box-shadow: 2px 2px 3px black;
 }
 .Edit-container{
@@ -989,4 +1036,71 @@ padding-block: 20px;
   padding:12px;
   border: none;
   border-radius: 1rem;
+}
+/* Notification container */
+.Toastify__toast-container {
+  width: 350px;
+  font-family: Arial, sans-serif;
+}
+
+/* Notification toast */
+.Toastify__toast {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Success Notification */
+.Toastify__toast--success {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Error Notification */
+.Toastify__toast--error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Info Notification */
+.Toastify__toast--info {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Warning Notification */
+.Toastify__toast--warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Close button */
+.Toastify__close-button {
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  height: 4px;
+  background: linear-gradient(to right, #4caf50, #8bc34a);
+}
+
+
+.recharts-tooltip-wrapper{
+  width:20% !important;
+}
+.recharts-responsive-container{
+  width: 95% !important;
+    height: 90%;
+    min-width: 0px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import image from '../assets/login-img.jpg';
 import axios from 'axios';
@@ -87,7 +87,7 @@ function Login() {
           )}
 
           <p>
-            If you don't have an account, <Link to="/signin">Sign in</Link>
+            If you dont have an account, <Link to="/signin">Sign in</Link>
           </p>
         </div>
       </div>

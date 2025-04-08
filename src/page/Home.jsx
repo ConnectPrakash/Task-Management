@@ -1,4 +1,4 @@
-import {react} from 'react'
+
 import Header from '../component/header';
 import image1 from '../assets/pngwing.com (1).png'
 import image2 from '../assets/pngwing.com (2).png'

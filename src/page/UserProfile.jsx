@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../component/header";
 import axios from "axios";
 import image from '../assets/male.jpg'
@@ -10,9 +10,6 @@ function UserProfile() {
   const [company, setCompany] = useState([]);
   const [edit,setEdit] = useState(false);
 
-  const [name,setName] = useState('');
-  const [email,setEmail] = useState('');
-  const [role,setRole] = useState('');
 
 
   const token = localStorage.getItem("token");

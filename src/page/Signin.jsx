@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -25,14 +25,12 @@ function Signin() {
    const handleRole = (e) => {
       const selectedRole = e.target.value;
       setRole(selectedRole);
-      setAdmin(!admin);  // Fix: Use selectedRole
+      setAdmin(!admin);  // Fix:Use selectedRole
    };
 
    const handleSubmit = (e) => {
       e.preventDefault();
       if (loading) return;
-
-    
 
       setLoading(true);
       setMessage("");

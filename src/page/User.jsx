@@ -3,6 +3,7 @@ import Header from "../component/header";
 import axios from "axios";
 import image from '../assets/male.jpg'
 import { useNavigate } from "react-router-dom";
+
 function User() {
   const [tasks, setTasks] = useState([]);
   const [company, setCompany] = useState([]);

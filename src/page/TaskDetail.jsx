@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useLocation, useParams } from 'react-router-dom'
 import Header from '../component/Header';
 
