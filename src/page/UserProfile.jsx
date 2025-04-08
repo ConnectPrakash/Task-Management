@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import Header from "../component/header";
 import axios from "axios";
-import image from '../assets/male.jpg'
+import image from "../assets/male.jpg";
 
 import { jwtDecode } from "jwt-decode";
+import Header from "../components/Header";
 
 function UserProfile() {
   const [user, setUser] = useState(null);
   const [company, setCompany] = useState([]);
-  const [edit,setEdit] = useState(false);
-
-
+  const [edit, setEdit] = useState(false);
 
   const token = localStorage.getItem("token");
 
@@ -34,10 +32,9 @@ function UserProfile() {
       });
   }, []);
 
-  const handleEdit = () =>{
-   setEdit(true);
-  
-  }
+  const handleEdit = () => {
+    setEdit(true);
+  };
   useEffect(() => {
     axios
       .get(`https://task-management-1-al5b.onrender.com/user/${decode.id}`)
@@ -59,28 +56,29 @@ function UserProfile() {
       <Header props="User Profile" />
       <div className="user-profile ">
         <div className="user-profile-img">
-         
           <img src={image || "/default-profile.jpg"} alt="Profile" />
-         
         </div>
         <button onClick={handleEdit}>Edit</button>
         <div>
           <h2>Name:</h2>
-         {edit ? <input type="text" value={user.name}/>:<p>{user.name || "N/A"}</p>} 
+          {edit ? (
+            <input type="text" value={user.name} />
+          ) : (
+            <p>{user.name || "N/A"}</p>
+          )}
         </div>
         <div>
           <h2>Email:</h2>
-          {edit ? <input type="text"/> : <p>{user.email || "N/A"}</p>}
+          {edit ? <input type="text" /> : <p>{user.email || "N/A"}</p>}
         </div>
         <div>
           <h2>Role:</h2>
-          {edit ? <input type="text"/>:<p>{user.role || "N/A"}</p>}
+          {edit ? <input type="text" /> : <p>{user.role || "N/A"}</p>}
         </div>
         <div>
           <h2>Company:</h2>
           <p>{userCompany ? userCompany.name : "Not assigned"}</p>
         </div>
-        
       </div>
     </div>
   );

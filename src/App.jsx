@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from "react";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Sidebar from "./component/Sidebar";
-import  Loader  from "./component/loader";
+import Sidebar from "./components/Sidebar";
+import Loader from "./components/loader";
 
 // Lazy load pages
 const Home = lazy(() => import("./page/Home"));
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="divide-page">
       <Sidebar />
-      
+
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />

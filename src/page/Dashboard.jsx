@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "../component/header";
+import Header from "../components/Header";
 import axios from "axios";
 import { FilePenLine } from "lucide-react";
 import { ToastContainer } from "react-toastify";
@@ -14,7 +14,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import Loader from "../component/loader";
+import Loader from "../components/loader";
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([]);
@@ -98,25 +98,32 @@ const Dashboard = () => {
         ) : userTasks.length > 0 ? (
           <div>
             {/* ✅ Line Chart Section */}
-            <div style={{ width: "100%",height:"350px", backgroundColor: "white" }}>
-  <h2 style={{ padding: "1rem", fontSize: "18px" }}>📈 Task Progress Overview</h2>
-  <ResponsiveContainer width="95%" height="100%">
-    <LineChart data={chartData}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="month" />
-      <YAxis allowDecimals={false} />
-      <Tooltip />
-      <Line
-        type="monotone"
-        dataKey="tasksCompleted"
-        stroke="#3b82f6"
-        strokeWidth={3}
-        activeDot={{ r: 6 }}
-      />
-    </LineChart>
-  </ResponsiveContainer>
-</div>
-
+            <div
+              style={{
+                width: "100%",
+                height: "350px",
+                backgroundColor: "white",
+              }}
+            >
+              <h2 style={{ padding: "1rem", fontSize: "18px" }}>
+                📈 Task Progress Overview
+              </h2>
+              <ResponsiveContainer width="95%" height="100%">
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="month" />
+                  <YAxis allowDecimals={false} />
+                  <Tooltip />
+                  <Line
+                    type="monotone"
+                    dataKey="tasksCompleted"
+                    stroke="#3b82f6"
+                    strokeWidth={3}
+                    activeDot={{ r: 6 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
 
             {/* Task List */}
             <ul>

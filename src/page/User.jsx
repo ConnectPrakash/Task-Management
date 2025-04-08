@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Header from "../component/header";
 import axios from "axios";
-import image from '../assets/male.jpg'
+import image from "../assets/male.jpg";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 
 function User() {
   const [tasks, setTasks] = useState([]);
   const [company, setCompany] = useState([]);
-const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get("https://task-management-1-al5b.onrender.com/user")
@@ -45,12 +45,11 @@ const navigate = useNavigate();
             );
 
             return (
-              <li key={task._id} onClick={()=>navigate(`/user/${task._id}`)}>
+              <li key={task._id} onClick={() => navigate(`/user/${task._id}`)}>
                 <div className="User-img">
-                  <img src={image} alt="default"/>
+                  <img src={image} alt="default" />
                 </div>
                 <div className="User-item">
-
                   <h2>{task.name}</h2>
                   <p>{task.email}</p>
                   <p>{companyData ? companyData.name : "Unknown Company"}</p>
