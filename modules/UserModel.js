@@ -41,6 +41,10 @@ const UserSchema = new mongoose.Schema({
     "User":[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User"
+    }],
+    "tasks":[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Task"
     }]
 },{timestamps:true});
 
